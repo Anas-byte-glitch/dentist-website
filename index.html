@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PureSmile Dental Clinic — Premium Dental Care</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="light-mode">
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div id="loader">
+    <div class="loader-inner">
+      <svg class="loader-icon" viewBox="0 0 60 60" fill="none">
+        <circle cx="30" cy="30" r="28" stroke="var(--accent)" stroke-width="2" stroke-dasharray="175" stroke-dashoffset="175"/>
+        <path d="M20 28c0-5.5 4.5-10 10-10s10 4.5 10 10c0 8-10 16-10 16S20 36 20 28z" fill="var(--accent)" opacity="0.8"/>
+      </svg>
+      <span class="loader-text">PureSmile</span>
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <svg viewBox="0 0 32 32" fill="none" width="28" height="28">
+          <circle cx="16" cy="16" r="15" stroke="var(--accent)" stroke-width="1.5"/>
+          <path d="M10 15c0-3.3 2.7-6 6-6s6 2.7 6 6c0 5-6 9-6 9s-6-4-6-9z" fill="var(--accent)"/>
+        </svg>
+        <span>PureSmile</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-dark-toggle" id="darkToggle" aria-label="Toggle dark mode">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+        <button class="btn-nav-primary" id="openAuthModal">Patient Login</button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">✦ Trusted by 10,000+ Patients</div>
+      <h1 class="hero-title reveal">
+        Your Smile,<br/>
+        <em>Perfected.</em>
+      </h1>
+      <p class="hero-sub reveal">
+        Experience world-class dental care in a calm, modern environment.<br/>
+        From routine cleanings to complete smile transformations.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#appointment" class="btn-primary">Book Appointment</a>
+        <a href="#services" class="btn-ghost">Explore Services</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat"><strong>15+</strong><span>Years Experience</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>10k+</strong><span>Happy Patients</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>98%</strong><span>Satisfaction Rate</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hero-card-main">
+        <div class="hero-img-wrap">
+          <svg viewBox="0 0 260 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="doctor-svg">
+            <!-- Doctor silhouette -->
+            <ellipse cx="130" cy="100" rx="52" ry="55" fill="#dce8f5"/>
+            <circle cx="130" cy="88" r="40" fill="#c9ddf0"/>
+            <!-- Face -->
+            <ellipse cx="130" cy="88" rx="34" ry="36" fill="#f5dfc0"/>
+            <!-- Hair -->
+            <ellipse cx="130" cy="60" rx="34" ry="22" fill="#8c6a3f"/>
+            <!-- Eyes -->
+            <ellipse cx="118" cy="86" rx="4" ry="4.5" fill="#3a2a1a"/>
+            <ellipse cx="142" cy="86" rx="4" ry="4.5" fill="#3a2a1a"/>
+            <!-- Smile -->
+            <path d="M119 100 Q130 110 141 100" stroke="#c4775a" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Coat -->
+            <path d="M78 165 Q80 145 100 140 L130 155 L160 140 Q180 145 182 165 L188 280 H72 Z" fill="white"/>
+            <!-- Scrubs underneath -->
+            <path d="M100 140 L130 155 L160 140 L162 175 H98 Z" fill="#2980b9"/>
+            <!-- Stethoscope -->
+            <path d="M115 160 Q110 175 115 185 Q120 195 130 195 Q140 195 145 185 Q150 175 145 160" stroke="#555" stroke-width="3" fill="none"/>
+            <!-- Coat buttons -->
+            <circle cx="130" cy="200" r="3" fill="#ddd"/>
+            <circle cx="130" cy="218" r="3" fill="#ddd"/>
+            <circle cx="130" cy="236" r="3" fill="#ddd"/>
+          </svg>
+        </div>
+        <div class="hero-card-info">
+          <strong>Dr. Sarah Mitchell</strong>
+          <span>Chief Dentist, DDS</span>
+        </div>
+      </div>
+      <div class="floating-badge badge-1">
+        <span class="badge-icon">🦷</span>
+        <div><strong>Next Available</strong><span>Today, 2:00 PM</span></div>
+      </div>
+      <div class="floating-badge badge-2">
+        <span class="badge-icon">⭐</span>
+        <div><strong>4.9 / 5.0</strong><span>Patient Rating</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="about-img-card">
+            <svg viewBox="0 0 280 340" fill="none" class="about-svg">
+              <rect width="280" height="340" rx="20" fill="#eaf4fb"/>
+              <ellipse cx="140" cy="115" rx="60" ry="62" fill="#c9ddf0"/>
+              <ellipse cx="140" cy="108" rx="48" ry="50" fill="#f5dfc0"/>
+              <ellipse cx="140" cy="78" rx="48" ry="30" fill="#8c6a3f"/>
+              <ellipse cx="125" cy="106" rx="5" ry="5.5" fill="#3a2a1a"/>
+              <ellipse cx="155" cy="106" rx="5" ry="5.5" fill="#3a2a1a"/>
+              <path d="M128 122 Q140 133 152 122" stroke="#c4775a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <path d="M80 195 Q83 172 108 165 L140 182 L172 165 Q197 172 200 195 L208 340 H72 Z" fill="white"/>
+              <path d="M108 165 L140 182 L172 165 L175 200 H105 Z" fill="#1a6fa8"/>
+              <text x="50" y="250" font-family="DM Sans" font-size="11" fill="#999" font-weight="500">CERTIFICATION</text>
+              <rect x="50" y="258" width="120" height="2" rx="1" fill="#1a6fa8" opacity="0.4"/>
+              <text x="50" y="278" font-family="DM Sans" font-size="10" fill="#666">DDS — Harvard School of Dental Medicine</text>
+              <text x="50" y="295" font-family="DM Sans" font-size="10" fill="#666">Board Certified Orthodontist</text>
+              <text x="50" y="312" font-family="DM Sans" font-size="10" fill="#666">Member — ADA, AAO</text>
+            </svg>
+            <div class="about-exp-badge"><strong>15</strong><span>Years</span></div>
+          </div>
+        </div>
+        <div class="about-content reveal">
+          <span class="section-label">About the Doctor</span>
+          <h2 class="section-title">Meet Dr. Sarah Mitchell</h2>
+          <p class="about-lead">A passionate advocate for preventive dentistry and beautiful smiles, Dr. Mitchell combines clinical excellence with a gentle, patient-first approach.</p>
+          <p class="about-body">Graduating with honors from Harvard School of Dental Medicine, Dr. Mitchell has spent over 15 years transforming smiles and building lasting relationships with her patients. She believes that great dental care is the foundation of overall well-being.</p>
+          <div class="about-pillars">
+            <div class="pillar">
+              <div class="pillar-icon">🎓</div>
+              <div>
+                <strong>Harvard Educated</strong>
+                <span>DDS with Distinction, 2009</span>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">🏆</div>
+              <div>
+                <strong>Award Winning</strong>
+                <span>Top Dentist — City Health Awards 2023</span>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">💡</div>
+              <div>
+                <strong>Innovation-First</strong>
+                <span>Latest digital & laser techniques</span>
+              </div>
+            </div>
+          </div>
+          <blockquote class="about-mission">
+            <p>"Every patient deserves a smile they're proud of. My mission is to make exceptional dental care accessible, comfortable, and truly life-changing."</p>
+          </blockquote>
+          <a href="#appointment" class="btn-primary">Book a Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">What We Offer</span>
+        <h2 class="section-title">Our Dental Services</h2>
+        <p class="section-sub">Comprehensive care for every smile, using the latest technology and proven techniques.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal" data-service="Teeth Whitening">
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 48 48" fill="none" class="service-icon"><path d="M10 18c0-7.7 6.3-14 14-14s14 6.3 14 14c0 12-14 24-14 24S10 30 10 18z" fill="currentColor" opacity="0.15"/><path d="M10 18c0-7.7 6.3-14 14-14s14 6.3 14 14c0 12-14 24-14 24S10 30 10 18z" stroke="currentColor" stroke-width="2" fill="none"/><path d="M19 22l3 3 7-7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Teeth Whitening</h3>
+          <p>Professional-grade whitening that delivers up to 8 shades brighter results in a single session. Safe, fast, and long-lasting.</p>
+          <div class="service-footer">
+            <span class="service-price">From $199</span>
+            <a href="#appointment" class="service-link">Book →</a>
+          </div>
+        </div>
+        <div class="service-card reveal" data-service="Dental Implants">
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 48 48" fill="none" class="service-icon"><rect x="20" y="6" width="8" height="20" rx="4" fill="currentColor" opacity="0.15"/><rect x="20" y="6" width="8" height="20" rx="4" stroke="currentColor" stroke-width="2"/><path d="M16 26h16l-3 16H19L16 26z" stroke="currentColor" stroke-width="2" fill="currentColor" opacity="0.1"/></svg>
+          </div>
+          <h3>Dental Implants</h3>
+          <p>Permanent, natural-looking tooth replacement that preserves jaw bone and restores full chewing function. Lifetime confidence.</p>
+          <div class="service-footer">
+            <span class="service-price">From $1,200</span>
+            <a href="#appointment" class="service-link">Book →</a>
+          </div>
+        </div>
+        <div class="service-card reveal" data-service="Orthodontics">
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 48 48" fill="none" class="service-icon"><path d="M8 24h32M8 18h32M8 30h32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="16" cy="24" r="3" fill="currentColor"/><circle cx="24" cy="18" r="3" fill="currentColor"/><circle cx="32" cy="30" r="3" fill="currentColor"/></svg>
+          </div>
+          <h3>Orthodontics</h3>
+          <p>Traditional braces and clear aligners designed to straighten teeth discreetly and comfortably. Tailored treatment plans.</p>
+          <div class="service-footer">
+            <span class="service-price">From $2,500</span>
+            <a href="#appointment" class="service-link">Book →</a>
+          </div>
+        </div>
+        <div class="service-card reveal" data-service="Dental Cleaning">
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 48 48" fill="none" class="service-icon"><path d="M24 8C16 8 10 14 10 22c0 10 14 18 14 18s14-8 14-18c0-8-6-14-14-14z" fill="currentColor" opacity="0.15"/><path d="M24 8C16 8 10 14 10 22c0 10 14 18 14 18s14-8 14-18c0-8-6-14-14-14z" stroke="currentColor" stroke-width="2"/><path d="M17 22h14M24 15v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Dental Cleaning</h3>
+          <p>Professional scaling and polishing to remove tartar, prevent cavities, and keep your gums healthy. Recommended every 6 months.</p>
+          <div class="service-footer">
+            <span class="service-price">From $89</span>
+            <a href="#appointment" class="service-link">Book →</a>
+          </div>
+        </div>
+        <div class="service-card reveal" data-service="Veneers">
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 48 48" fill="none" class="service-icon"><rect x="12" y="10" width="24" height="28" rx="6" fill="currentColor" opacity="0.15"/><rect x="12" y="10" width="24" height="28" rx="6" stroke="currentColor" stroke-width="2"/><path d="M18 24l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Porcelain Veneers</h3>
+          <p>Ultra-thin porcelain shells bonded to the front of teeth, correcting color, shape, and alignment for a flawless smile.</p>
+          <div class="service-footer">
+            <span class="service-price">From $850/tooth</span>
+            <a href="#appointment" class="service-link">Book →</a>
+          </div>
+        </div>
+        <div class="service-card reveal" data-service="Root Canal">
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 48 48" fill="none" class="service-icon"><path d="M24 6L12 18v6l12 18 12-18v-6L24 6z" fill="currentColor" opacity="0.15"/><path d="M24 6L12 18v6l12 18 12-18v-6L24 6z" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="22" r="4" fill="currentColor" opacity="0.5"/></svg>
+          </div>
+          <h3>Root Canal Therapy</h3>
+          <p>Gentle, effective treatment to save infected teeth. Modern techniques make root canals virtually painless and quick to recover from.</p>
+          <div class="service-footer">
+            <span class="service-price">From $650</span>
+            <a href="#appointment" class="service-link">Book →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== APPOINTMENT BOOKING ===== -->
+  <section id="appointment" class="appointment">
+    <div class="container">
+      <div class="appointment-grid">
+        <div class="appointment-info reveal">
+          <span class="section-label">Book a Visit</span>
+          <h2 class="section-title">Schedule Your Appointment</h2>
+          <p>We make it easy to book your next dental visit. Choose a service, pick a time, and we'll take care of the rest.</p>
+          <div class="appt-features">
+            <div class="appt-feat"><span>✓</span> Same-day appointments available</div>
+            <div class="appt-feat"><span>✓</span> Insurance accepted</div>
+            <div class="appt-feat"><span>✓</span> Flexible payment plans</div>
+            <div class="appt-feat"><span>✓</span> Free first consultation</div>
+          </div>
+          <div class="appt-hours">
+            <h4>Office Hours</h4>
+            <div class="hours-grid">
+              <span>Mon – Fri</span><span>8:00 AM – 6:00 PM</span>
+              <span>Saturday</span><span>9:00 AM – 3:00 PM</span>
+              <span>Sunday</span><span>Closed</span>
+            </div>
+          </div>
+        </div>
+        <div class="appointment-form-wrap reveal">
+          <form id="appointmentForm" class="appt-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="apptName">Full Name *</label>
+                <input type="text" id="apptName" name="name" placeholder="Jane Doe" autocomplete="name"/>
+                <span class="field-error" id="apptNameErr"></span>
+              </div>
+              <div class="form-group">
+                <label for="apptPhone">Phone Number *</label>
+                <input type="tel" id="apptPhone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel"/>
+                <span class="field-error" id="apptPhoneErr"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="apptEmail">Email Address *</label>
+              <input type="email" id="apptEmail" name="email" placeholder="jane@example.com" autocomplete="email"/>
+              <span class="field-error" id="apptEmailErr"></span>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="apptDate">Preferred Date *</label>
+                <input type="date" id="apptDate" name="date"/>
+                <span class="field-error" id="apptDateErr"></span>
+              </div>
+              <div class="form-group">
+                <label for="apptService">Service *</label>
+                <select id="apptService" name="service">
+                  <option value="">— Select a Service —</option>
+                  <option>Teeth Whitening</option>
+                  <option>Dental Implants</option>
+                  <option>Orthodontics</option>
+                  <option>Dental Cleaning</option>
+                  <option>Porcelain Veneers</option>
+                  <option>Root Canal Therapy</option>
+                  <option>General Consultation</option>
+                </select>
+                <span class="field-error" id="apptServiceErr"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="apptMessage">Additional Notes</label>
+              <textarea id="apptMessage" name="message" placeholder="Describe your concerns or any relevant medical history…" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full" id="apptSubmitBtn">
+              <span class="btn-text">Confirm Appointment</span>
+              <span class="btn-spinner" hidden>⏳</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Patient Stories</span>
+        <h2 class="section-title">What Our Patients Say</h2>
+      </div>
+      <div class="testimonials-slider reveal">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <!-- Card 1 -->
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"Dr. Mitchell completely transformed my smile. After years of being self-conscious about my teeth, I finally smile with total confidence. The process was painless and the results are stunning."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:#c9ddf0">JL</div>
+              <div>
+                <strong>Jessica Liu</strong>
+                <span>Porcelain Veneers Patient</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"I was terrified of the dentist for 10 years. PureSmile changed everything. The staff is incredibly warm, the clinic is beautiful, and Dr. Mitchell explained every step. I'm no longer afraid."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:#d0f0d8">MR</div>
+              <div>
+                <strong>Marcus Roberts</strong>
+                <span>General Dentistry Patient</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"The teeth whitening results exceeded my expectations. 8 shades brighter in one session! Perfect before my wedding. Everyone was commenting on my smile the whole day."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:#fde8d0">SA</div>
+              <div>
+                <strong>Sofia Andersson</strong>
+                <span>Whitening Patient</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"My implants look and feel completely natural. Two years on and I forget they're even there. Worth every penny — the quality of life improvement is incredible."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:#e8d0f5">DK</div>
+              <div>
+                <strong>David Kim</strong>
+                <span>Implant Patient</span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="testi-card">
+            <div class="testi-stars">★★★★☆</div>
+            <p class="testi-text">"Amazing orthodontic treatment. My clear aligners were so discreet that most people didn't even notice I was wearing them during treatment. Brilliant results in 14 months."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:#d0e8f5">AP</div>
+              <div>
+                <strong>Aisha Patel</strong>
+                <span>Orthodontics Patient</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" id="sliderPrev" aria-label="Previous">‹</button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-btn" id="sliderNext" aria-label="Next">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Our Work</span>
+        <h2 class="section-title">Clinic & Smile Gallery</h2>
+        <p class="section-sub">Browse our clinic spaces and smile transformation cases.</p>
+      </div>
+      <div class="gallery-tabs reveal">
+        <button class="tab-btn active" data-tab="all">All</button>
+        <button class="tab-btn" data-tab="clinic">Clinic</button>
+        <button class="tab-btn" data-tab="before-after">Before & After</button>
+      </div>
+      <div class="gallery-grid reveal" id="galleryGrid">
+        <!-- Clinic images -->
+        <div class="gallery-item" data-cat="clinic" style="--bg:#dce8f5">
+          <div class="gallery-thumb clinic-thumb-1">
+            <svg viewBox="0 0 240 180" fill="none">
+              <rect width="240" height="180" fill="#e8f3fc"/>
+              <rect x="20" y="100" width="200" height="60" rx="4" fill="white" opacity="0.7"/>
+              <rect x="40" y="30" width="160" height="80" rx="8" fill="#c5ddf2"/>
+              <rect x="60" y="50" width="120" height="40" rx="4" fill="white" opacity="0.5"/>
+              <circle cx="120" cy="150" r="10" fill="#1a6fa8" opacity="0.3"/>
+              <text x="120" y="155" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#1a6fa8">Reception</text>
+            </svg>
+          </div>
+          <div class="gallery-overlay"><span>Reception Area</span></div>
+        </div>
+        <div class="gallery-item" data-cat="clinic" style="--bg:#d8f0e0">
+          <div class="gallery-thumb">
+            <svg viewBox="0 0 240 180" fill="none">
+              <rect width="240" height="180" fill="#e8faf0"/>
+              <rect x="30" y="60" width="180" height="100" rx="6" fill="white" opacity="0.6"/>
+              <rect x="80" y="40" width="80" height="30" rx="4" fill="#a8d8b8" opacity="0.8"/>
+              <circle cx="120" cy="90" r="30" fill="#c8ecd4" stroke="#2e7d52" stroke-width="2"/>
+              <path d="M105 90 l10 10 20-20" stroke="#2e7d52" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <text x="120" y="148" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#2e7d52">Treatment Room</text>
+            </svg>
+          </div>
+          <div class="gallery-overlay"><span>Treatment Room</span></div>
+        </div>
+        <div class="gallery-item gallery-item-wide" data-cat="clinic" style="--bg:#fdeedd">
+          <div class="gallery-thumb">
+            <svg viewBox="0 0 400 180" fill="none">
+              <rect width="400" height="180" fill="#fff8ee"/>
+              <rect x="20" y="30" width="120" height="120" rx="10" fill="#fde8c0" opacity="0.7"/>
+              <rect x="160" y="30" width="120" height="120" rx="10" fill="#fde8c0" opacity="0.5"/>
+              <rect x="300" y="30" width="80" height="120" rx="10" fill="#fde8c0" opacity="0.3"/>
+              <text x="200" y="168" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#c87941">Waiting Lounge</text>
+            </svg>
+          </div>
+          <div class="gallery-overlay"><span>Comfortable Waiting Lounge</span></div>
+        </div>
+        <!-- Before/After images -->
+        <div class="gallery-item" data-cat="before-after" style="--bg:#f5e8f5">
+          <div class="gallery-thumb">
+            <svg viewBox="0 0 240 180" fill="none">
+              <rect width="120" height="180" fill="#f8e8e8"/>
+              <rect x="120" y="0" width="120" height="180" fill="#e8f8e8"/>
+              <path d="M120 0 L120 180" stroke="white" stroke-width="3"/>
+              <text x="60" y="90" text-anchor="middle" font-family="DM Sans" font-size="12" fill="#c44" font-weight="600">Before</text>
+              <text x="180" y="90" text-anchor="middle" font-family="DM Sans" font-size="12" fill="#2a2" font-weight="600">After</text>
+              <!-- Simple teeth shapes -->
+              <rect x="30" y="100" width="60" height="25" rx="4" fill="#d4a" opacity="0.4"/>
+              <rect x="150" y="100" width="60" height="25" rx="4" fill="white" opacity="0.9" stroke="#ccc"/>
+              <text x="60" y="140" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#999">Whitening</text>
+              <text x="180" y="140" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#999">Result</text>
+            </svg>
+          </div>
+          <div class="gallery-overlay"><span>Whitening Transformation</span></div>
+        </div>
+        <div class="gallery-item" data-cat="before-after" style="--bg:#e8f0f8">
+          <div class="gallery-thumb">
+            <svg viewBox="0 0 240 180" fill="none">
+              <rect width="120" height="180" fill="#fce8e8"/>
+              <rect x="120" y="0" width="120" height="180" fill="#e8fce8"/>
+              <path d="M120 0 L120 180" stroke="white" stroke-width="3"/>
+              <text x="60" y="90" text-anchor="middle" font-family="DM Sans" font-size="12" fill="#c44" font-weight="600">Before</text>
+              <text x="180" y="90" text-anchor="middle" font-family="DM Sans" font-size="12" fill="#2a2" font-weight="600">After</text>
+              <text x="120" y="150" text-anchor="middle" font-family="DM Sans" font-size="9" fill="#888">Veneer Case #12</text>
+            </svg>
+          </div>
+          <div class="gallery-overlay"><span>Veneer Transformation</span></div>
+        </div>
+        <div class="gallery-item" data-cat="clinic" style="--bg:#e8e8f8">
+          <div class="gallery-thumb">
+            <svg viewBox="0 0 240 180" fill="none">
+              <rect width="240" height="180" fill="#f0f0fc"/>
+              <rect x="20" y="20" width="200" height="110" rx="8" fill="#d8d8f8" opacity="0.7"/>
+              <circle cx="120" cy="75" r="25" fill="#a0a0e8" opacity="0.5"/>
+              <rect x="70" y="145" width="100" height="15" rx="4" fill="white" opacity="0.5"/>
+              <text x="120" y="157" text-anchor="middle" font-family="DM Sans" font-size="10" fill="#5555aa">Digital X-Ray Suite</text>
+            </svg>
+          </div>
+          <div class="gallery-overlay"><span>Digital X-Ray Suite</span></div>
+        </div>
+      </div>
+    </div>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" hidden>
+      <div class="lightbox-overlay" id="lightboxOverlay"></div>
+      <div class="lightbox-content">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <div class="lightbox-img-wrap" id="lightboxImgWrap"></div>
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Contact Us</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-card">
+            <div class="contact-detail">
+              <span class="contact-icon">📍</span>
+              <div>
+                <strong>Address</strong>
+                <span>248 Smile Avenue, Suite 4B<br/>New York, NY 10001</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-icon">📞</span>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:+12125550100">+1 (212) 555-0100</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-icon">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:hello@puresmile.com">hello@puresmile.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9!2d-73.9857!3d40.7484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjMiTiA3M8KwNTknMDguNSJX!5e0!3m2!1sen!2sus!4v1234567890"
+              width="100%" height="220" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="PureSmile Location"></iframe>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal">
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="ctName">Your Name *</label>
+              <input type="text" id="ctName" placeholder="Jane Doe"/>
+              <span class="field-error" id="ctNameErr"></span>
+            </div>
+            <div class="form-group">
+              <label for="ctEmail">Email Address *</label>
+              <input type="email" id="ctEmail" placeholder="jane@example.com"/>
+              <span class="field-error" id="ctEmailErr"></span>
+            </div>
+            <div class="form-group">
+              <label for="ctMessage">Message *</label>
+              <textarea id="ctMessage" rows="5" placeholder="How can we help you?"></textarea>
+              <span class="field-error" id="ctMessageErr"></span>
+            </div>
+            <button type="submit" class="btn-primary btn-full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">
+            <svg viewBox="0 0 32 32" fill="none" width="28" height="28">
+              <circle cx="16" cy="16" r="15" stroke="var(--accent)" stroke-width="1.5"/>
+              <path d="M10 15c0-3.3 2.7-6 6-6s6 2.7 6 6c0 5-6 9-6 9s-6-4-6-9z" fill="var(--accent)"/>
+            </svg>
+            <span>PureSmile</span>
+          </a>
+          <p>Premium dental care built on trust, technology, and a genuine passion for healthy smiles.</p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Facebook">f</a>
+            <a href="#" class="social-btn" aria-label="Instagram">in</a>
+            <a href="#" class="social-btn" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-btn" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+        <div class="footer-links-group">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#appointment">Teeth Whitening</a></li>
+            <li><a href="#appointment">Dental Implants</a></li>
+            <li><a href="#appointment">Orthodontics</a></li>
+            <li><a href="#appointment">Dental Cleaning</a></li>
+            <li><a href="#appointment">Veneers</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Subscribe for dental health tips and clinic news.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="your@email.com"/>
+            <button type="submit" class="btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 PureSmile Dental Clinic. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== AUTH MODAL ===== -->
+  <div id="authModal" class="modal" hidden>
+    <div class="modal-overlay" id="authOverlay"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="authClose">✕</button>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login">Login</button>
+        <button class="auth-tab" data-tab="register">Register</button>
+      </div>
+      <!-- Login Form -->
+      <div id="loginPanel" class="auth-panel">
+        <h3>Welcome Back</h3>
+        <p class="auth-sub">Sign in to access your patient dashboard</p>
+        <form id="loginForm" novalidate>
+          <div class="form-group">
+            <label for="loginEmail">Email Address</label>
+            <input type="email" id="loginEmail" placeholder="jane@example.com"/>
+            <span class="field-error" id="loginEmailErr"></span>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" placeholder="••••••••"/>
+            <span class="field-error" id="loginPasswordErr"></span>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Sign In</button>
+          <p class="auth-switch">Don't have an account? <button type="button" class="link-btn" data-switch="register">Register here</button></p>
+        </form>
+      </div>
+      <!-- Register Form -->
+      <div id="registerPanel" class="auth-panel" hidden>
+        <h3>Create Account</h3>
+        <p class="auth-sub">Join PureSmile as a patient</p>
+        <form id="registerForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="regFirst">First Name</label>
+              <input type="text" id="regFirst" placeholder="Jane"/>
+              <span class="field-error" id="regFirstErr"></span>
+            </div>
+            <div class="form-group">
+              <label for="regLast">Last Name</label>
+              <input type="text" id="regLast" placeholder="Doe"/>
+              <span class="field-error" id="regLastErr"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="regEmail">Email Address</label>
+            <input type="email" id="regEmail" placeholder="jane@example.com"/>
+            <span class="field-error" id="regEmailErr"></span>
+          </div>
+          <div class="form-group">
+            <label for="regPhone">Phone Number</label>
+            <input type="tel" id="regPhone" placeholder="+1 (555) 000-0000"/>
+          </div>
+          <div class="form-group">
+            <label for="regPassword">Password</label>
+            <input type="password" id="regPassword" placeholder="Min. 6 characters"/>
+            <span class="field-error" id="regPasswordErr"></span>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Create Account</button>
+          <p class="auth-switch">Already have an account? <button type="button" class="link-btn" data-switch="login">Login here</button></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PATIENT DASHBOARD MODAL ===== -->
+  <div id="dashModal" class="modal" hidden>
+    <div class="modal-overlay" id="dashOverlay"></div>
+    <div class="modal-box modal-box-wide">
+      <button class="modal-close" id="dashClose">✕</button>
+      <div class="dashboard">
+        <div class="dash-header">
+          <div class="dash-avatar" id="dashAvatar">JP</div>
+          <div>
+            <h3 id="dashWelcome">Welcome, Jane!</h3>
+            <span id="dashEmail" class="dash-email">jane@example.com</span>
+          </div>
+          <button class="btn-ghost btn-sm" id="logoutBtn">Logout</button>
+        </div>
+        <div class="dash-stats">
+          <div class="dash-stat"><strong>3</strong><span>Total Visits</span></div>
+          <div class="dash-stat"><strong>1</strong><span>Upcoming</span></div>
+          <div class="dash-stat"><strong>Active</strong><span>Status</span></div>
+        </div>
+        <div class="dash-section">
+          <h4>Appointment History</h4>
+          <div class="appt-history" id="apptHistory">
+            <div class="appt-row">
+              <div class="appt-info">
+                <strong>Teeth Whitening</strong>
+                <span>Dr. Sarah Mitchell</span>
+              </div>
+              <div class="appt-meta">
+                <span class="appt-date">Mar 12, 2025</span>
+                <span class="appt-status status-done">Completed</span>
+              </div>
+            </div>
+            <div class="appt-row">
+              <div class="appt-info">
+                <strong>Dental Cleaning</strong>
+                <span>Dr. Sarah Mitchell</span>
+              </div>
+              <div class="appt-meta">
+                <span class="appt-date">Jan 05, 2025</span>
+                <span class="appt-status status-done">Completed</span>
+              </div>
+            </div>
+            <div class="appt-row">
+              <div class="appt-info">
+                <strong>General Consultation</strong>
+                <span>Dr. Sarah Mitchell</span>
+              </div>
+              <div class="appt-meta">
+                <span class="appt-date">Apr 18, 2025</span>
+                <span class="appt-status status-upcoming">Upcoming</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#appointment" class="btn-primary" id="dashBookBtn">Book New Appointment</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BOOKING CONFIRMATION MODAL ===== -->
+  <div id="confirmModal" class="modal" hidden>
+    <div class="modal-overlay" id="confirmOverlay"></div>
+    <div class="modal-box modal-box-narrow">
+      <div class="confirm-content">
+        <div class="confirm-icon">✅</div>
+        <h3>Appointment Confirmed!</h3>
+        <p id="confirmText">Your appointment has been successfully booked. We'll send a confirmation to your email shortly.</p>
+        <div class="confirm-detail" id="confirmDetail"></div>
+        <button class="btn-primary btn-full" id="confirmOk">Wonderful, Thanks!</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TOAST ===== -->
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
